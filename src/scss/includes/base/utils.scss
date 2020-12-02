@@ -1,3 +1,17 @@
+#svgcolorfill {
+    fill: $color-main;
+}
+
+#svgcolorstroke {
+    stroke: $color-main;
+    stroke-width: 3px;
+}
+
+
+.whitetext{
+	color: white;
+}
+
 .alignleft {
 	float: left;
 	margin: 0 10px 5px 0;
@@ -24,12 +38,13 @@
 
 .container {
 	margin: auto;
-	max-width: 1230px;
+	max-width: 1200px;
 	padding: 0 24px;
 	width: 100%;
 	
 	@include desktop {
-		padding: 0 15px;
+		width: 90%;
+		padding: 0px;
 	}
 }
 
