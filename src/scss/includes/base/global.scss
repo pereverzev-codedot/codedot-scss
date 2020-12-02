@@ -10,6 +10,54 @@
 		transition-property: background, border, color, left, margin, padding, right, opacity;
 	}
 }
+html{
+	scroll-behavior: smooth;
+	font-family: $font-Monsterrat;
+}
+
+h2{
+	font-size: 20px;
+	@include desktop(){
+		font-size: 40px;
+	}
+}
+
+.nav_link {
+    color: #000;
+    text-decoration: none;
+	padding: 20px;
+	@include desktop(){
+		color: #fff;
+		padding: 10px;
+	}
+}
+
+.nav_link:hover {
+    color: $color-main;
+}
+
+.nav_link:active {
+    color: $color-main;
+}
+
+.lang_link {
+    color: #fff;
+    text-decoration: none;
+	padding: 20px;
+	@include desktop(){
+		margin-right: 10px;
+	}
+}
+
+.lang_link:hover {
+    color: $color-main;
+}
+
+.lang_link:active {
+    color: $color-main;
+}
+
+
 
 html,
 body {
