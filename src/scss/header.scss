@@ -26,9 +26,18 @@
 
         .logo {
             width: 76px;
+            height: 22px ;
             margin-left: 20px;
+            mask: url(/src/img/logo.svg) no-repeat;
+            mask-size: contain;
+            mask-position: left center;
+            -webkit-mask: url(/src/img/logo.svg) no-repeat ;
+            -webkit-mask-size: contain;
+            -webkit-mask-position: left center;
+            background:$color-main;
             @include desktop-extra(){
                 width: 152px;
+                height: 44px;
             }
         }
 
