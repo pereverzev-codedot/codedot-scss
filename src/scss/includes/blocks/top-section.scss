@@ -1,0 +1,111 @@
+.background {
+    background-image: url(../img/background.jpg), linear-gradient(45deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+    left: -50px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+
+    .container_head {
+        text-align: center;
+        max-width: 100%;
+
+        @include desktop-extra {
+            text-align: center;
+            //display: flex;
+            height: 100%;
+            width: 1200px;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .mainimg {
+            width: 303px;
+            padding-top: 175px;
+
+            @include desktop() {
+                width: 800px;
+            }
+
+            @include desktop-extra() {
+                width: 1190px;
+                padding-top: 217px;
+            }
+        }
+
+        .mainwords {
+            margin-top: 21px;
+            padding-left: 0px;
+            margin-bottom: 0px;
+            display: block;
+            width: 100%;
+            font-size: 20px;
+            font-family: 'MuseoModerno';
+
+            @include desktop() {
+                padding-top: 67px;
+                margin-top: 0px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 25px;
+            }
+            @include desktop-extra() {
+                font-size: 30px;
+            }
+            .el {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-style: normal;
+                font-weight: normal;
+                line-height: 35px;
+
+                &__slashslash::before {
+                    display: none;
+
+                    @include desktop() {
+                        display: inline;
+                        content: "/";
+                        margin-right: 50px;
+                        font-size: 40px;
+
+                        @include desktop-extra() {
+                            font-size: 60px;
+                            margin-right: 100px;
+                        }
+                    }
+                }
+
+                &__slashslash::after {
+                    display: none;
+
+                    @include desktop() {
+                        content: "/";
+                        display: inline;
+                        margin-left: 50px;
+                        font-size: 40px;
+
+                        @include desktop-extra() {
+                            font-size: 60px;
+                            margin-left: 100px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .btndown {
+            padding-bottom: 24px;
+            padding-top: 94px;
+            width: 46px;
+            margin: 0 auto;
+            @include desktop(){
+                padding-top: 62px;
+                width: 88px;
+            }
+        }
+    }
+}
