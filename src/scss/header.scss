@@ -1,1 +1,224 @@
-.header {}
+.header {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background: rgb(31, 31, 31);
+    z-index: 999;
+
+    @include desktop-extra() {
+        background: rgba(31, 31, 31, 0.6);
+    }
+
+    .header-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 53px;
+        text-decoration: none;
+        width: 100%;
+
+        @include desktop-extra() {
+            height: 90px;
+            width: 1200px;
+        }
+
+        .logo {
+            width: 76px;
+            height: 22px;
+            margin-left: 20px;
+            mask: url(/src/img/logo.svg) no-repeat;
+            mask-size: contain;
+            mask-position: left center;
+            -webkit-mask: url(/src/img/logo.svg) no-repeat;
+            -webkit-mask-size: contain;
+            -webkit-mask-position: left center;
+            background: $color-main;
+
+            @include desktop-extra() {
+                width: 152px;
+                height: 44px;
+            }
+        }
+
+        .header-right {
+            width: 89px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-right: 25px;
+
+            @include desktop-extra() {
+                width: 100%;
+                justify-content: flex-end;
+                margin-right: 0px;
+            }
+
+            .gamburgmenu {
+                position: relative;
+                display: block;
+                padding: 20px 0 20px 0;
+                z-index: 100;
+                order: 2;
+
+                @include desktop-extra() {
+                    order: 0;
+
+                    .gamburger_img {
+                        display: none;
+                    }
+                }
+
+
+                &:hover .gamburgmenu_drop {
+                    display: block;
+                    width: 204px;
+
+                    @include desktop-extra() {
+                        width: 100%;
+                        display: flex;
+                    }
+                }
+
+
+                .gamburgmenu_drop {
+                    display: none;
+                    position: absolute;
+                    padding-top: 15px;
+                    background-color: rgba(245, 204, 61, 1);
+                    left: -105px;
+                    top: -12px;
+                    z-index: 1;
+                    margin-top: 15px;
+                    padding-right: 50px;
+                    margin-right: 0px;
+                    padding-top: 0px;
+                    padding-left: 0px;
+                    width: 204px;
+                    height: 367px;
+
+                    @include desktop-extra() {
+                        display: flex;
+                        background-color: transparent;
+                        height: 40px;
+                        width: 100%;
+                        position: static;
+                        padding: 0;
+                        margin: 0;
+
+                    }
+
+
+                    .gamburger_logo {
+                        font-size: 20px;
+                        color: white;
+                        font-weight: bold;
+
+                        @include desktop-extra() {
+                            display: none;
+                        }
+                    }
+
+                    .hr {
+                        margin: 0;
+                        padding-left: 0px;
+                        display: table;
+                        width: 100%;
+                        justify-content: space-around;
+
+                        @include desktop-extra() {
+                            display: flex;
+                            width: 716px;
+                            align-items: center;
+                            justify-content: space-evenly;
+                            font-size: 25px;
+                        }
+
+
+
+                        .el {
+                            color: #000;
+                            right: 0px;
+                            padding: 12px 15px;
+                            margin-right: 0px;
+                            display: block;
+                            margin-right: -50px;
+                            border-bottom: 1px white solid;
+
+                            @include desktop-extra() {
+                                display: flex;
+                                border-bottom: none;
+                                padding: 5px;
+                                margin: 0px;
+                            }
+                        }
+
+                        & li:hover {
+                            background-color: rgba(12, 12, 12, 0.6);
+                            color: $color-main;
+
+                            @include desktop-extra() {
+                                background-color: transparent;
+                            }
+                        }
+
+                    }
+                }
+
+
+
+
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline;
+                padding: 20px 0 20px 0;
+
+                @include desktop-extra() {
+                    font-size: 25px;
+                    padding: 30px 0px;
+                }
+
+                &:hover .dropdown__drop-down-menu {
+                    display: block;
+                }
+
+                &__drop-down-menu {
+                    display: none;
+                    position: absolute;
+                    background-color: rgba(31, 31, 31, 0.6);
+                    left: -55px;
+                    margin-top: 15px;
+                    border-radius: 20px;
+                    z-index: 1;
+                    margin-top: 20px;
+                    padding-right: 50px;
+                    margin-right: 0px;
+                    padding-top: 0px;
+                    padding-left: 0px;
+
+                    @include desktop-extra() {
+                        margin-top: 35px;
+                    }
+
+                    .el {
+                        right: 0px;
+                        padding: 12px 15px;
+                        margin-right: 0px;
+                        display: block;
+                        margin-right: -50px;
+                        border-radius: 20px;
+                    }
+
+                    li:hover {
+                        background-color: rgba(12, 12, 12, 0.6);
+                        color: $color-main;
+                    }
+
+                }
+            }
+        }
+    }
+}
